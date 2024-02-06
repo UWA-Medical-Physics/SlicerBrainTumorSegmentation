@@ -24,6 +24,9 @@ What it is and what it can be used for? Its an interface to the BraTS-Toolkit to
 
 4) Select neural network models: Users can choose from a list of trained neural network models. The flexibility to select multiple models and incorporate new available models into the list. This feature empowers users to tailor the program's analysis to their specific requirements and leverage the latest advancements in neural network models.
 
+![s5](https://github.com/UWA-Medical-Physics/SlicerBrainTumorSegmentation/assets/80670821/018d95f7-74e1-444a-9390-4bb6f6b865e9)
+
+
 Publication: to be added soon
 
 License: Apache 2.0. 

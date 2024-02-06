@@ -13,11 +13,18 @@ What it is and what it can be used for? Its an interface to the BraTS-Toolkit to
 
 ![Screenshot from 2024-02-06 12-11-03](https://github.com/saimasafdar2021/SlicerBrainTumorSegmentation/assets/80670821/293f8fc6-8dcb-42da-81f6-57f5561ba9e4)
 
-Tutorial: step-by-step description of at least the most typical use case, include a few screenshots, provide download links to sample input data set
-Path to the external Python: Users specify the location where the BraTs Toolkit, a crucial component of the program, will be installed. This step ensures seamless integration with the desired Python environment.
-Path to data directory: Users must provide the path to the directory containing patients' data in NifTI format. Within this directory, individual patient data folders are present, each comprising the following essential images, including (a) T1-weighted magnetic resonance imaging (MRI), (b) T2-weighted MRI, (c) T2 fluid attenuated inversion recovery (FLAIR), and (d) T1-weighted contrast-enhanced MRI (T1c). These images form the foundation for subsequent processing.
-Patient ID: To accurately track processed patient data within the provided data folder, users input a unique patient identifier. This identifier enables the software to organize and associate the processed data with the respective patient.
-Select neural network models: Users can choose from a list of trained neural network models. The flexibility to select multiple models and incorporate new available models into the list. This feature empowers users to tailor the program's analysis to their specific requirements and leverage the latest advancements in neural network models.
+Tutorial: 
+
+1) Path to the external Python: Users specify the location where the BraTs Toolkit, a crucial component of the program, will be installed. This step ensures seamless integration with the desired Python environment.
+
+2) Path to data directory: Users must provide the path to the directory containing patients' data in NifTI format. Within this directory, individual patient data folders are present, each comprising the following essential images, including (a) T1-weighted magnetic resonance imaging (MRI), (b) T2-weighted MRI, (c) T2 fluid attenuated inversion recovery (FLAIR), and (d) T1-weighted contrast-enhanced MRI (T1c). These images form the foundation for subsequent processing.
+
+3) Patient ID: To accurately track processed patient data within the provided data folder, users input a unique patient identifier. This identifier enables the software to organize and associate the processed data with the respective patient.
+
+4) Select neural network models: Users can choose from a list of trained neural network models. The flexibility to select multiple models and incorporate new available models into the list. This feature empowers users to tailor the program's analysis to their specific requirements and leverage the latest advancements in neural network models.
+
 Publication: to be added soon
+
 License: Apache 2.0. 
-Content of submitted s4ext file is consistent with the top-level CMakeLists.txt file in the repository (description, URLs, dependencies, etc. are the same)
+
+

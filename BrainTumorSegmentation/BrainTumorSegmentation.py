@@ -408,8 +408,9 @@ class BrainTumorSegmentationLogic(ScriptedLoadableModuleLogic):
     """
     #a method to call for installing the brats toolkit and docker requirements
     self.installPackages(pythonPath)
-  
-
+    import os
+    print(pythonPath)
+    print(os.path.dirname(__file__))
     import time
     import os
     import re
@@ -498,7 +499,9 @@ class BrainTumorSegmentationLogic(ScriptedLoadableModuleLogic):
 
         self.log(f"All required patient files found for patient with id = {patID} and patient directory = {startPatientDirName}\n")
         self.log(f"Starting preprocessor of the brats toolkit for patient id {patID}\n")
-        command_line = [r"/home/useradmin/anaconda3/bin/python3.8", "/media/useradmin/Disk2/BraTS-Toolkit-Simulator/bratsPreprocessor.py",startPatientDirPath, startPatientDirName, files[0], files[1], files[2], files[3]]
+        path_to_bratPreprocessor = os.path.dirname(__file__)+"/bratsPreprocessor.py"
+        print(path_to_bratPreprocessor)
+        command_line = [pythonPath, path_to_bratPreprocessor ,startPatientDirPath, startPatientDirName, files[0], files[1], files[2], files[3]]
         import subprocess
         from subprocess import check_output
         import sys,os
@@ -552,7 +555,9 @@ class BrainTumorSegmentationLogic(ScriptedLoadableModuleLogic):
         
         self.log(f"All required patient files found for starting segmentator for patient with id = {patID} and patient directory = {startPatientDirName}\n")
         self.log(f"Starting segmentator of the brats toolkit for patient id {patID}")
-        command_line = [r"/home/useradmin/anaconda3/bin/python3.8", "/media/useradmin/Disk2/BraTS-Toolkit-Simulator/bratsSegmentor.py", startPatientDirPath, startPatientDirName, str(nnModels)]
+        path_to_bratSegmentor = os.path.dirname(__file__)+"/bratsSegmentor.py"
+        print(path_to_bratSegmentor)
+        command_line = [pythonPath, path_to_bratSegmentor, startPatientDirPath, startPatientDirName, str(nnModels)]
         try:
             print("inside segmentator")
             proc = slicer.util.launchConsoleProcess(command_line, useStartupEnvironment=True)
@@ -590,7 +595,9 @@ class BrainTumorSegmentationLogic(ScriptedLoadableModuleLogic):
             
         self.log(f"All required patient files found to proceed with fusionator for patient with id = {patID} and patient directory = {startPatientDirName}\n")    
         self.log("Starting fusionator of the brats toolkit.............")    
-        command_line = [r"/home/useradmin/anaconda3/bin/python3.8", "/media/useradmin/Disk2/BraTS-Toolkit-Simulator/bratsFusionator.py",  startPatientDirPath, startPatientDirName, str(nnModels)]
+        path_to_bratFusionator = os.path.dirname(__file__)+"/bratsFusionator.py"
+        print( path_to_bratFusionator)
+        command_line = [pythonPath, path_to_bratFusionator ,  startPatientDirPath, startPatientDirName, str(nnModels)]
         try:
             print("inside fusionator", startPatientDirPath, startPatientDirName)
             proc = slicer.util.launchConsoleProcess(command_line, useStartupEnvironment=True)
@@ -660,7 +667,7 @@ class BrainTumorSegmentationLogic(ScriptedLoadableModuleLogic):
         stopTime = time.time()
         self.log('Processing completed in {0:.2f} seconds\n'.format(stopTime-startTime))
 
-#
+# #
 # BrainTumorSegmentationTest
 #
 

@@ -13,7 +13,7 @@ What it is and what it can be used for? Its an interface to the BraTS-Toolkit to
 
 ![Screenshot from 2024-02-06 12-11-03](https://github.com/saimasafdar2021/SlicerBrainTumorSegmentation/assets/80670821/293f8fc6-8dcb-42da-81f6-57f5561ba9e4)
 
-_Tutorial_ 
+#Tutorial 
 
 1) Path to the external Python: Users specify the location where the BraTs Toolkit, a crucial component of the program, will be installed. This step ensures seamless integration with the desired Python environment.
 
@@ -27,7 +27,7 @@ Publication: to be added soon
 
 License: Apache 2.0. 
 
-_Installation_
+#Installation
 You must have the Brats toolkit installed on your computer and have the python path selected correctly using the SlicerBrianTumorSegmentation, where you have installed the Brats toolkit. 
 
 The extension has been tested on the Intel® Core™ i9-10900X CPU @ 3.70GHz × 20 with an operating System Ubuntu 20.04.2 LTS

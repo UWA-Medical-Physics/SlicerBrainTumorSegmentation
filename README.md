@@ -31,3 +31,6 @@ License: Apache 2.0.
 You must have the Brats toolkit installed on your computer and have the python path selected correctly using the SlicerBrianTumorSegmentation, where you have installed the Brats toolkit. 
 
 The extension has been tested on the Intel® Core™ i9-10900X CPU @ 3.70GHz × 20 with an operating System Ubuntu 20.04.2 LTS
+
+# Feature Request
+Please open an issue to request any features or changes. 

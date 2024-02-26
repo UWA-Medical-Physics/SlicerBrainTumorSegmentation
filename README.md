@@ -32,6 +32,12 @@ Publication: to be added soon
 License: Apache 2.0. 
 
 # Installation
+Pre-requisites installation:
+For Brats-toolkit installation, pease follow the link below:
+
+Further, NVIDIA Docker Toolkit needs to be installed (installation instructions here: https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker and here: https://neuronflow.github.io/BraTS-Preprocessor/#dockerinstallation ).
+https://github.com/neuronflow/BraTS-Toolkit
+
 You must have the Brats toolkit installed on your computer and have the python path selected correctly using the SlicerBrianTumorSegmentation, where you have installed the Brats toolkit. 
 
 The extension has been tested on the Intel® Core™ i9-10900X CPU @ 3.70GHz × 20 with an operating System Ubuntu 20.04.2 LTS

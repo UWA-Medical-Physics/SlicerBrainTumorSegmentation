@@ -1,5 +1,5 @@
 #-----------------------------------------------------------------------------
-set(MODULE_NAME BrainTumorSegmentation)
+set(MODULE_NAME BatchBrainMRTumorSegmentation)
 
 #-----------------------------------------------------------------------------
 set(MODULE_PYTHON_SCRIPTS

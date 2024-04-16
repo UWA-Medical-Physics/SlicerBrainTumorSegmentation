@@ -26,6 +26,27 @@ What it is and what it can be used for? Its an interface to the BraTS-Toolkit to
 
 ![s5](https://github.com/UWA-Medical-Physics/SlicerBrainTumorSegmentation/assets/80670821/018d95f7-74e1-444a-9390-4bb6f6b865e9)
 
+How to run?
+The program requires specific inputs to execute its functionality effectively. These inputs include:
+
+1)	Path to the external Python: This parameter defines the location where the BraTs Toolkit is installed. 
+This is the Path to the external Python installed on the user computer that contains the installation of the BraTS-Toolkit.
+Or this path is required to install the BraTS-Toolkit.
+
+2)	Path to data directory: Users must provide the path to the directory containing the patients' data.
+Within this directory, individual patient data folders are present, with each folder comprising the following essential images: 
+(a) T1-weighted magnetic resonance imaging (MRI), (b) T2-weighted MRI, (c) FLAIR, and (d) contrast-enhanced MRI. 
+
+3)	Patient ID: To track patients data.
+
+4)	Select neural network models: This input allows users to choose from a list of trained neural network models. 
+Users have the flexibility to select multiple models and even incorporate new available models into the list. 
+
+What are the outputs?
+Outputs are the segmentation files for each patient data. The segmentation is performed based on the selected number of neural networks. In the fusion part of the 
+program all the segmentations from the individual neural networks are combined based on majority voting and iterative SIMPLE fusion to generate consensus segmentations.
+These segmentations are converted to original MRI data space to get the transformed segmentations so that the tumour segmentation results can be viewed on the original 
+MRI data. 
 
 Publication: to be added soon
 

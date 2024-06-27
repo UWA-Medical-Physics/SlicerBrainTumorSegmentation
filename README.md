@@ -136,6 +136,30 @@ Finally check NVIDIA-smi using
 Use the following link to resolve any issues with the docker installation
 https://forums.developer.nvidia.com/t/nvida-container-toolkit-failed-to-initialize-nvml-unknown-error/286219/2
 
+After this, you have to make the docker run without sudo, for that follow the https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user
+
+To create the docker group and add your user:
+
+Create the docker group.
+
+    sudo groupadd docker
+
+Add your user to the docker group.
+
+    sudo usermod -aG docker $USER
+
+Log out and log back in so that your group membership is re-evaluated.
+
+If you're running Linux in a virtual machine, it may be necessary to restart the virtual machine for changes to take effect.
+
+You can also run the following command to activate the changes to groups:
+
+     newgrp docker
+
+Verify that you can run docker commands without sudo.
+
+     docker run hello-world
+
 You must have the Brats toolkit installed on your computer and have the python path selected correctly using the SlicerBrianTumorSegmentation, where you have installed the Brats toolkit. 
 
 The extension has been tested on the Intel® Core™ i9-10900X CPU @ 3.70GHz × 20 with an operating System Ubuntu 20.04.2 LTS

@@ -64,7 +64,7 @@ https://github.com/neuronflow/BraTS-Toolkit
 First install the NVIDIA toolkit container with the apt commands
 https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#configuration
 
-## Installing with Apt
+### Installing with Apt
 
 Configure the production repository:
 
@@ -94,7 +94,7 @@ Before you install Docker Engine for the first time on a new host machine, you n
 
 Set up Docker's apt repository.
 
-## Add Docker's official GPG key:
+### Add Docker's official GPG key:
     
     sudo apt-get update
     
@@ -106,11 +106,11 @@ Set up Docker's apt repository.
     
     sudo chmod a+r /etc/apt/keyrings/docker.asc
 
-## Add the repository to Apt sources:
+### Add the repository to Apt sources:
     echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
-  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
-  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+      "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+      $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+      sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
     
     sudo apt-get update
 
@@ -129,7 +129,8 @@ This command downloads a test image and runs it in a container. When the contain
 You have now successfully installed and started Docker Engine.
 
 Finally check NVIDIA-smi using
-sudo docker run --rm --runtime=nvidia --gpus all ubuntu nvidia-smi
+    
+        sudo docker run --rm --runtime=nvidia --gpus all ubuntu nvidia-smi
 
 
 Use the following link to resolve any issues with the docker installation

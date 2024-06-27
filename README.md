@@ -64,26 +64,26 @@ https://github.com/neuronflow/BraTS-Toolkit
 First install the NVIDIA toolkit container with the apt commands
 https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#configuration
 
-#Installing with Apt
+## Installing with Apt
 
 Configure the production repository:
 
-curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \
-  && curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | \
-    sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
-    sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
+    curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \
+      && curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | \
+        sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
+        sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
 
 Optionally, configure the repository to use experimental packages:
 
-sed -i -e '/experimental/ s/^#//g' /etc/apt/sources.list.d/nvidia-container-toolkit.list
+    sed -i -e '/experimental/ s/^#//g' /etc/apt/sources.list.d/nvidia-container-toolkit.list
 
 Update the packages list from the repository:
 
-sudo apt-get update
+    sudo apt-get update
 
 Install the NVIDIA Container Toolkit packages:
 
-sudo apt-get install -y nvidia-container-toolkit
+    sudo apt-get install -y nvidia-container-toolkit
 
 After that install Docker
 https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
@@ -92,21 +92,27 @@ Install using the apt repository
 
 Before you install Docker Engine for the first time on a new host machine, you need to set up the Docker repository. Afterward, you can install and update Docker from the repository.
 
-    Set up Docker's apt repository.
+Set up Docker's apt repository.
 
-# Add Docker's official GPG key:
-sudo apt-get update
-sudo apt-get install ca-certificates curl
-sudo install -m 0755 -d /etc/apt/keyrings
-sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
-sudo chmod a+r /etc/apt/keyrings/docker.asc
+## Add Docker's official GPG key:
+    
+    sudo apt-get update
+    
+    sudo apt-get install ca-certificates curl
+    
+    sudo install -m 0755 -d /etc/apt/keyrings
+    
+    sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+    
+    sudo chmod a+r /etc/apt/keyrings/docker.asc
 
-# Add the repository to Apt sources:
-echo \
+## Add the repository to Apt sources:
+    echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-sudo apt-get update
+    
+    sudo apt-get update
 
 Install the Docker packages.
 

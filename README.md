@@ -136,7 +136,9 @@ Finally check NVIDIA-smi using
 Use the following link to resolve any issues with the docker installation
 https://forums.developer.nvidia.com/t/nvida-container-toolkit-failed-to-initialize-nvml-unknown-error/286219/2
 
-After this, you have to make the docker run without sudo, for that follow the https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user
+After this, you have to make the docker run without sudo, for that follow the https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user  
+
+https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user
 
 To create the docker group and add your user:
 

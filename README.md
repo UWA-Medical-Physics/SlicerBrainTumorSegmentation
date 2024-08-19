@@ -1,4 +1,4 @@
-# This toolkit has been updated according to comments from Slicer Community. The  new link to the toolkit is https://github.com/UWA-Medical-Physics/SlicerBrats
+### This toolkit has been updated according to comments from Slicer Community. The  new link to the toolkit is https://github.com/UWA-Medical-Physics/SlicerBrats
 # BraTS-Toolkit-Simulator
 ## Automated tumour segmentation
 
